@@ -8,6 +8,7 @@ services:
     ports:
       - "8080:80"
     volumes:
+# mount volumes in local vm: drupal-moduls,...
       - drupal-modules:/var/www/html/modules
       - drupal-profiles:/var/www/html/profiles       
       - drupal-sites:/var/www/html/sites      
@@ -22,3 +23,4 @@ volumes:
   drupal-profiles:
   drupal-sites:
   drupal-themes:
+# eJE-JwP-e8V-Kmc

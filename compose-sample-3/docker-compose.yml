@@ -8,11 +8,16 @@
 services:
   proxy:
     build:
+# context: . shows that special custom image will be build in the current dir. Custome image named nginx.Dockerfile
       context: .
       dockerfile: nginx.Dockerfile
     ports:
       - '80:80'
   web:
     image: httpd
+# the volum is mounted from local dir html (below). 
+#So, I will code here in html and forward it to httpd but below proxi server build on nginx
+#nginx.conf- also based in current dir
+#image will be built from nginx.Dockerfile
     volumes:
       - ./html:/usr/local/apache2/htdocs/
