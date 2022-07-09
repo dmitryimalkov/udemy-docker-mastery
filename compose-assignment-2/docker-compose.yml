@@ -8,6 +8,7 @@ services:
 
   drupal:
     image: custom-drupal
+# custom image will be built in a current directory
     build: .
     ports:
       - "8081:80"
